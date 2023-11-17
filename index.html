@@ -1,306 +1,472 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <!-- 更新範囲 -->
+    <!-- SEO対策 -->
+    <title>きたかんとう水族館[公式]｜トップページ</title>
+    <meta name="Description"
+        content="札幌で海の仲間達との楽しい思い出を、『きたかんとう水族館』。人気のイルカやトドなどのパフォーマンスやペンギンやリクガメのお散歩パレード情報などをご紹介しています。">
+    <meta name="Keywords" content="北海道,札幌,水族館,動物園,北関東水族館,家族,人気">
+    <meta name="application-name" content="きたかんとう水族館">
+    <!-- ここまでSEO -->
+
+    <link rel="icon" href="/access/image/favicon.ico">
+    <!--  -->
+    <!-- グーグルフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Yomogi&display=swap" rel="stylesheet">
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css"
+        href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/css/6-1-7.css"> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- jquery読み込み -->
+    <script src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
+
 </head>
 
 <body>
-    <div class="loading" id="loading"></div>
-
-
-    <header>
-        <div class="head_box">
-            <div class="head_logo_box">
-                <a href="./index.html"><img src="./img/foot_logo.png" alt="左上ロゴ"></a>
+    <main>
+        <!-- Loading画面 -->
+        <div class="common">
+            <div class="loading" id="loading">
+                <div class="squid">
+                    <img src="../img/loading/02kurage.png" alt="">
+                </div>
+                <div class="loading_text">
+                    <h2>LOADING..</h2>
+                </div>
             </div>
-        </div>
-        <nav id="nav_target">
+            <!-- mask -->
+            <div class="mask" id="mask"></div>
+
+            <!-- ハンバーガーメニュー -->
             <div class="openbtn" id="target">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul id="g-nav">
-                <li class="list1"><a href="./index.html">トップページ</a></li>
-                <li class="list2"><a href="./Link/about us.html">北関東学院とは</a></li>
-                <li class="list3"><a href="./Link02/design.html">WEB デザインクリエーター科</a></li>
-                <li class="list4"><a href="./Link03/program.html">WEB プログラミングデザイン科</a></li>
-                <li class="list5"><a href="./Link04/frontend.html">WEB フロントエンド構築科</a></li>
-                <li class="list6"><a href="./Link05/staff.html">スタッフ紹介</a></li>
-                <li class="list7"><a href="./Link06/Alumni.html">修了生の声</a></li>
-                <li class="list8"><a href="./Link07/apply.html">申込方法</a></li>
-                <li class="list9"><a href="./Link08/office.html">会社概要</a></li>
-            </ul>
-        </nav>
 
-        <div class="overlay" id="js-overlay"></div>
+            <!-- mainvisual -->
+            <div class="video_fish">
+                <video class="video_background" src="./mp4/mainvisualback.mp4" muted="" autoplay="" loop=""></video>
+                <video id="video" src="../mp4/mainvisual03.mp4" muted="" autoplay="" loop=""></video>
+            </div>
 
-        <div class="mainvisual_box" id="main">
-            <div class="mainvisual_img_move_box">
-                <div class="mainvisual_img_box">
-                    <img src="./img/kitakantou_icon.png" alt="中央ロゴ">
-                    <div class="mainvisual_text_box">
-                        <h3>KITAKANTO GAKUIN</h3>
-                        <h3>北関東学院</h3>
-                    </div>
-                    <h2>未経験から</h2>
-                    <h2>IT関係のお仕事へ</h2>
-                    <p>就職・転職を目指す職業訓練校</p>
+            <!-- header -->
+
+            <header>
+                <div class="head_box">
+                    <ul class="head_flex_box" id="menu_list1">
+                        <li>
+                            <a href="./index.html">
+                                <div class="head_box_list">
+                                    <img src="../img/header-icon/01suizokukan.png" alt="">
+                                    <p>水族館TOP</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./aria/aria.html#iruka">
+                                <div class="head_box_list">
+                                    <img src="../img/header-icon/02iruka.png" alt="">
+                                    <p>イルカプール</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./aria/aria.html#penguin">
+                                <div class="head_box_list">
+                                    <img src="../img/header-icon/03pengin.png" alt="">
+                                    <p>ペンギン館</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="./aria/aria.html#suisou">
+                                <div class="head_box_list">
+                                    <img src="../img/header-icon/06sakana.png" alt="">
+                                    <p>すいそう館</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./aria/aria.html#kaijyu">
+                                <div class="head_box_list">
+                                    <img src="../img/header-icon/04kaijyu.png" alt="">
+                                    <p>海獣エリア</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./aria/aria.html#rikugame">
+                                <div class="head_box_list">
+                                    <img src="../img/header-icon/05kame.png" alt="">
+                                    <p>リクガメ散歩</p>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="head_flex_box2" id="menu_list2">
+                        <li><a href="./index.html#infomation">施設案内</a></li>
+                        <li><a href="./access/access.html#map">エリアマップ</a></li>
+                        <li><a href="./access/access.html#access1">アクセス</a></li>
+                        <li><a href="./contact/contact.html">お問い合わせ</a></li>
+                    </ul>
                 </div>
+            </header>
+        </div>
+        <!-- header終わり -->
+
+        <section class="topics">
+            <h2 class="topics_title"><span class="wave">トピックス</span></h2>
+        </section>
+
+        <section class="topics_slider">
+            <ul class="slider">
+                <li><a href="./aria/aria.html#iruka"><img src="./aria/images/イルカ.jpg" alt="いるか">
+                        <div class="slider_pick">
+                            <h2>Pick Up!</h2>
+                        </div>
+                        <p class="slider_text">イルカショー開催中</p>
+                    </a></li>
+                <li><a href="./aria/aria.html#penguin"><img src="./aria/images/ペンギン01.jpg" alt="ペンギン">
+                        <div class="slider_pick">
+                            <h2>Pick Up!</h2>
+                        </div>
+                        <p class="slider_text">ペンギンのおさんぽ</p>
+                    </a></li>
+                <li><a href="./aria/aria.html#suisou"><img src="./aria/images/クラゲ.JPG" alt="くらげ">
+                        <div class="slider_pick">
+                            <h2>Pick Up!</h2>
+                        </div>
+                        <p class="slider_text">美しい熱帯魚の世界</p>
+                    </a></li>
+                <li><a href="./aria/aria.html#kaijyu"><img src="./aria/images/アザラシえさやり.jpg" alt="とど">
+                        <div class="slider_pick">
+                            <h2>Pick Up!</h2>
+                        </div>
+                        <p class="slider_text">海獣ショータイム</p>
+                    </a></li>
+                <li><a href="./aria/aria.html#rikugame"><img src="./aria/images/リクガメ.jpg" alt="りくがめ">
+                        <div class="slider_pick">
+                            <h2>Pick Up!</h2>
+                        </div>
+                        <p class="slider_text">リクガメの<br>驚きの大きさを体験</p>
+                    </a></li>
+            </ul>
+        </section>
+        <!-- newsとinfomation横並び -->
+        <!-- <div class="flex_section"> -->
+
+        <div class="flex_section">
+            <!-- news -->
+            <section class="news">
+                <h2 class="news_title">お知らせ</h2>
+
+                <!-- </div> -->
+
+                <!-- やまがた ----お知らせ------>
+                <div class="news_list_box">
+                    <ul>
+                        <li><a href="">
+                                <div class="news_time">2024年4月20日</div>
+                                <div class="news_name">「G.W.期間中小中学生入館料無料」</div>
+                            </a></li>
+                        <li><a href="./aria/aria.html#iruka">
+                                <div class="news_time">2023年11月11日</div>
+                                <div class="news_name">「イルカにさわってみよう！」</div>
+                            </a></li>
+                        <li><a href="./aria/aria.html#penguin">
+                                <div class="news_time">2023年10月10日</div>
+                                <div class="news_name">「写真撮影 自由！」<br>ペンギン＆リクガメと♪</div>
+                            </a></li>
+                        <li><a href="./aria/aria.html#kaijyu">
+                                <div class="news_time">2023年9月9日</div>
+                                <div class="news_name">「迫力満点！トドのダイブ」</div>
+                            </a></li>
+                        <li><a href="./aria/aria.html#kaijyu">
+                                <div class="news_time">2023年8月8日</div>
+                                <div class="news_name">「おねだりが可愛い♪」<br>アザラシえさやり体験</div>
+                            </a></li>
+                    </ul>
+                </div>
+                <!-- やまがた  ----お知らせ----ここまで -->
+            </section>
+            <!-- facility_services開始 -->
+            <div class="facility_services">
+                <section class="infomation" id="infomation">
+                    <img src="./img/img_img/entrance.JPG" alt="" class="fish01">
+                    <h2 class="infomation_title">施設案内</h2>
+                    <div class="infomation_box">
+                        <div class="infomation_content"><a href="#information_facility"><img
+                                    src="./img/info-icon/01arukikata.png" alt=""
+                                    style="height: 50px;"><br>水族館<br>の歩き方</a>
+                        </div>
+                        <div class="infomation_content"><a href="#price_information"><img
+                                    src="./img/info-icon/02tiketto.png" alt="" style="height: 50px;"><br>入園料金</a></div>
+                        <div class="infomation_content"><a href="./access/access.html#access1"><img
+                                    src="./img/info-icon/03pa-king.png" alt=""
+                                    style="height: 50px;"><br>駐車場の<br>ごあんない</a></div>
+                        <div class="infomation_content"><a href="#nursing_room"><img
+                                    src="./img/info-icon/04jyunyuusitu.png" alt=""
+                                    style="height: 50px;"><br>授乳室の<br>ごあんない</a></div>
+                        <div class="infomation_content"><a href="#babyrental"><img src="./img/info-icon/05bebycar.png"
+                                    alt="" style="height: 50px;"><br>ベビーカー<br>貸出</a></div>
+                        <div class="infomation_content"><a href="#wheelchairrental"><img
+                                    src="./img/info-icon/06kurumaisu.png" alt="" style="height: 50px;"><br>車いす<br>貸出</a>
+                        </div>
+
+
+                    </div>
+
+                </section>
             </div>
         </div>
+        <!-- newsとinfomation横並び終わり -->
+        <section class="information_facility" id="information_facility">
+            <img src="./img/img_img/kurage2.jpg" alt="" class="fish02">
+            <img src="./img/img_img/suisou.JPG" alt="" class="fish03">
+            <img src="./img/img_img/picture (2).jpg" alt="" class="fish04">
 
-    </header>
+            <h2 class="information_facility_title">水族館の歩き方</h2>
+            <!-- やまがた "水族館の歩き方"  -->
 
-    <main>
-        <section>
-            <div class="section-title-box">
-                <div class="section-number-area">
-                    <h2>#01</h2>
-                </div>
-                <div class="section-title-area" id="about us">
-                    <h1>ABOUT US</h1>
-                </div>
-            </div>
-            <div class="section-subtitle-box">
-                <h3>北関東学院とは</h3>
-            </div>
-            <div class="main-text-box">
-                <h2>"未経験からでもIT業界へ就職・転職できる職業訓練校"</h2>
-                <p>北関東学院とはWebやパソコンに関するスキルアップを通じて<br>
-                    早期就職を目指す為の厚生労働省認定の職業訓練校です。<br>
-                    近年の現場で必要な技術を半年間無料で学習できるので、未経験からでも<br>
-                    IT業界のお仕事へ就職した方も多くおります。</p>
-            </div>
-            <div class="link-box">
-                <a href="./Link/about us.html">詳細はこちら ></a>
-            </div>
+            <ul class="accordion_area">
+                <li>
+                    <section>
+                        <h3 class="title">いきもの案内</h3>
+                        <div class="box">
+                            <p class="area_name">イルカ</p>
+                            <p>おねだりが可愛いイルカにえさをあげることができます。イルカショーも開催中！</p>
+                            <p class="area_name">ペンギン</p>
+                            <p>ペンギンたちが自由に泳ぎ回る様子を見たあとは、園内をおさんぽするペンギンと自由に写真を取れます♪</p>
+                            <p class="area_name">すいそう館</p>
+                            <p>ジンベイザメの大きな水槽・幻想的な世界のクラゲ水槽・世界中の小さなお魚たちの水槽が並んでいます。</p>
+                            <p class="area_name">海獣エリア</p>
+                            <p>迫力満点！トドのダイブや可愛いアザラシのえさやり体験ができます♪</p>
+                            <a href="./aria/aria.html">くわしくはこちら</a>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">休憩スペース</h3>
+                        <div class="box">
+                            <p>各展示エリアの間には、ベンチやテーブルが設置された休憩エリアがあります。ここで一息ついたり、持ち込んだ飲食を楽しむことができます。</p>
+                            <a href="#">くわしくはこちら</a>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">レストラン</h3>
+                        <div class="box">
+                            <p>本館2階にはレストランがあります。ここでは、パークホテルの一流シェフによる季節の味覚料理を楽しむことができます。
+                                窓からは水族館の全景を眺めることができます。</p>
+                            <a href="#">くわしくはこちら</a>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">ショップ</h3>
+                        <div class="box">
+                            <p>本館1階にはショップがあります。ここでは、オリジナルグッズや海洋生物に関する書籍などを購入することができます。</p>
+                            <a href="#">くわしくはこちら</a>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">ご利用サービス</h3>
+                        <div class="box">
+                            <p>当館では、ベビーカーや車いすの貸し出し、授乳室、駐車場などのサービスを提供しております。詳細は各サービスの案内をご覧ください。</p>
+                            <a href="#nursing_room">くわしくはこちら</a>
+                        </div>
+                    </section>
+                </li>
+            </ul>
+
+            <!-- やまがた "水族館の歩き方" 以上 -->
+        </section>
+        <section class="price_information" id="price_information">
+            <!-- やまがた "入園料金" -->
+
+            <img src="./img/img_img/825_clownfish_kakurekumanomi_8894.jpg" class="kumanomi01">
+            <h2 class="price_information_title">入園料金</h2>
+
+
+            <ul class="accordion_area">
+                <li>
+                    <section>
+                        <h3 class="title">一般入場料</h3>
+                        <div class="box">
+                            <p>大人（18歳以上）：2,000円</p>
+                            <p>高校生：1,500円</p>
+                            <p>中学生・小学生：1,000円</p>
+                            <p>幼児（4歳以上）：500円</p>
+                            <p>3歳以下：無料</p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title" >年間パスポート</h3>
+                        <div class="box">
+                            <p>大人：10,000円</p>
+                            <p>高校生：7,500円</p>
+                            <p>中学生・小学生：5,000円</p>
+                            <p>幼児：2,500円</p>
+                            <p>年間パスポートは購入日から1年間、
+                                何度でも入場可能です。</p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">グループ割引</h3>
+                        <div class="box">
+                            <p>15名以上の団体様は、
+                                各入場料から20%割引となります。</p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">障害者割引</h3>
+                        <div class="box">
+                            <p>障害者手帳をお持ちの方と、その介護者1名様は、
+                                各入場料から50%割引となります。</p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">その他</h3>
+                        <div class="box">
+                            <p>ペンギンの給餌体験：500円（事前予約が必要です）</p>
+                            <p>深海エリアガイドツアー：1,000円（事前予約が必要です）</p>
+                        </div>
+                    </section>
+                </li>
+            </ul>
+            <img src="./img/img_img/picture (3).jpg" class="fish">
+            <!-- やまがた  ----入園料金----ここまで -->
         </section>
 
-        <section class="section02">
-            <div class="section-title-box">
-                <div class="section-number-area section-number-area02">
-                    <h2>#02</h2>
-                </div>
-                <div class="section-title-area section-title-area02" id="content to study">
-                    <h1>CONTENT TO STUDY</h1>
-                </div>
-            </div>
-            <div class="section-subtitle-box">
-                <h3>北関東学院で学習できる内容</h3>
-            </div>
-            <div class="main-text-box">
-                <h2>"最新のソフト・パソコンで「今」必要な技術・知識が学習できる"</h2>
-                <p>北関東学院では「今」必要な技術・知識を受講生の方に学習して頂くために、<br>
-                    最新のツールやソフトウェアを用意しております。<br>
-                    また、時代に合わせた言語を学習できるように<br>
-                    訓練内容は以下の３つのコースより構成しております。</p>
-            </div>
+        <!-- 切り取り -->
 
-            <div class="couse-select-box">
-                <div class="cousebox">
-                    <div class="couse-imgbox">
-                        <img src="./main.images/web design.jpg" alt="デザイン">
-                    </div>
-                    <div class="couse-textbox">
-                        <h2>DESIGN CREATE</h2>
-                        <h4>WEB デザインクリエーター科</h4>
-                        <p>Web制作の職場で、Illustrator CC・Photoshop CC・jQuery等を用い、
-                            Webデザイナー及びクリエイターとして現場実務ができることを目標としたコースです。
-                        </p>
-                    </div>
-                    <div class="link-box">
-                        <a href="./Link02/design.html">詳細はこちら ></a>
-                    </div>
-                </div>
-                <div class="cousebox">
-                    <div class="couse-imgbox">
-                        <img src="./main.images/programer.png" alt="プログラマー">
-                    </div>
-                    <div class="couse-textbox">
-                        <h2>PROGRAM DESIGN</h2>
-                        <h4>WEB プログラミングデザイン科</h4>
-                        <p>WEB制作を行う職場においてWEBプログラム、コーディング、データベース構築等、
-                            プログラミング関係の仕事に従事できるようになることを目標としたコースです。
-                        </p>
-                    </div>
-                    <div class="link-box">
-                        <a href="./Link03/program.html">詳細はこちら ></a>
-                    </div>
-                </div>
-                <div class="cousebox">
-                    <div class="couse-imgbox">
-                        <img src="./main.images/front end.jpg" alt="フロントエンド">
-                    </div>
-                    <div class="couse-textbox">
-                        <h2>FRONT END</h2>
-                        <h4>WEB フロントエンド構築科</h4>
-                        <p>フロントエンド業務においてWEBプログラム、コーディング、データベース構築等、
-                            プログラミング関係の仕事に従事することを目標としたコースです。
-                        </p>
-                    </div>
-                    <div class="link-box">
-                        <a href="./Link04/frontend.html">詳細はこちら ></a>
-                    </div>
-                </div>
-            </div>
+        <!-- 切り取り終わり -->
+        <section class="nursing_room" id="nursing_room">
+            <!-- やまがた "ご利用サービス" -->
+            <h2 class="nursing_room_title">ご利用サービス</h2>
+            <ul class="accordion_area">
+                <li>
+                    <section>
+                        <h3 class="title">授乳室</h3>
+                        <div class="box">
+                            <p class="area_name">場所</p>
+                            <p>授乳室は、水族館の2階、トロピカルフィッシュエリアの隣に位置しています。案内看板をご参照いただき、
+                                迷われた場合はスタッフまでお問い合わせください。</p>
+                            <p class="area_name">設備</p>
+                            <p>授乳室には、プライバシーを保つための個室が3室、オムツ交換台、手洗い場、ベビーベッド、ベビーチェアを完備しております。
+                                また、電子レンジと給湯設備もご用意しておりますので、ミルクの調整にもご利用いただけます。</p>
+                            <p class="area_name">利用時間</p>
+                            <p>授乳室は水族館の開館時間内（9:00～18:00）いつでもご利用いただけます。</p>
+                            <p class="area_name">利用ルール</p>
+                            <p>授乳室は、乳幼児をお連れのお客様専用となっております。大人だけのご利用はご遠慮ください。また、飲食のための利用は禁止とさせていただいております。</p>
+                            <p class="area_name">連絡先</p>
+                            <p>授乳室の設備に問題がある場合や、ご不明な点がございましたら、以下の連絡先までご連絡ください。 電話番号：0120-XXX-XXXX
+                                メールアドレス：nursingroom@aquarium.com
+                            </p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">ベビーカー貸出</h3>
+                        <div class="box">
+                            <p class="area_name">場所</p>
+                            <p>ベビーカーの貸し出しは、水族館の入口右手のインフォメーションカウンターで行っております</p>
+                            <p class="area_name">利用料金</p>
+                            <p>ベビーカーの貸し出しは無料です。ただし、数に限りがありますので、先着順とさせていただいております。</p>
+                            <p class="area_name">利用条件</p>
+                            <p>ベビーカーの貸し出しは、水族館の開館時間内（9:00～18:00）で行っております。返却は閉館時間の30分前までにお願いします。</p>
+                            <p class="area_name">連絡先</p>
+                            <p>ベビーカーに問題がある場合や、ご不明な点がございましたら、以下の連絡先までご連絡ください。 電話番号：0120-XXX-XXXX
+                                メールアドレス：babyrental@aquarium.com</p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">車いす貸出</h3>
+                        <div class="box">
+                            <p class="area_name">場所</p>
+                            <p>車いすの貸し出しは、水族館の入口左手のインフォメーションカウンターで行っております。</p>
+                            <p class="area_name">利用料金</p>
+                            <p>車いすの貸し出しは無料です。ただし、数に限りがありますので、先着順とさせていただいております。</p>
+                            <p class="area_name">利用条件</p>
+                            <p>車いすの利用は、歩行が困難なお客様が対象となります。また、車いすの数には限りがありますので、ご了承ください。</p>
+                            <p class="area_name">貸出時間</p>
+                            <p>車いすの貸し出しは、水族館の開館時間内（9:00～18:00）で行っております。返却は閉館時間の30分前までにお願いします。</p>
+                            <p class="area_name">連絡先</p>
+                            <p>車いすに問題がある場合や、ご不明な点がございましたら、以下の連絡先までご連絡ください。 電話番号：0120-XXX-XXXX
+                                メールアドレス：wheelchairrental@aquarium.com
+                            </p>
+                        </div>
+                    </section>
+                </li>
+
+            </ul>
+
+            <!-- やまがた  "ご利用サービス" ここまで-->
         </section>
-
-        <section class="section03">
-            <div class="section-title-box">
-                <div class="section-number-area section-number-area03">
-                    <h2>#03</h2>
-                </div>
-                <div class="section-title-area section-title-area03" id="other information">
-                    <h1>OTHER INFORMATION</h1>
-                </div>
+        </div>
+        <!-- facility_services終わり -->
+        <footer>
+            <div>
+                <small>&copy;Copyright 2023 Kitakantou Aquarium.Co.<br>All rights reserved.</small>
             </div>
-            <div class="section-subtitle-box">
-                <h3>その他情報</h3>
-            </div>
-            <div class="main-text-box">
-                <h2>"未経験からでもIT業界へ就職・転職できる職業訓練校"</h2>
-                <p>北関東学院について、スタッフの紹介や職業訓練受講修了後の受講生からの声、<br>
-                    お申し込み手順、弊社の概要など様々情報を掲載しております。</p>
-            </div>
-
-            <div class="other-select-box">
-                <div class="otherbox">
-                    <div class="other-imgbox other-imgbox01">
-                        <a href="./Link05/staff.html"><img src="./main.images/staff.jpg" alt="スタッフ"></a>
-                        <div class="other-textbox other-textbox01">
-                            <a href="./Link05/staff.html">
-                                <h3>スタッフ紹介</h3>
-                                <p>詳細はこちら</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="otherbox">
-                    <div class="other-imgbox other-imgbox02">
-                        <a href="./Link06/Alumni.html"><img src="./main.images/studeted.jpg" alt="修了生"></a>
-                        <div class="other-textbox other-textbox02">
-                            <a href="./Link06/Alumni.html">
-                                <h3>修了生の声</h3>
-                                <p>詳細はこちら</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="otherbox">
-                    <div class="other-imgbox other-imgbox03">
-                        <a href="./Link07/apply.html"><img src="./main.images/writing sheet.jpg" alt="申込"></a>
-                        <div class="other-textbox other-textbox03">
-                            <a href="./Link07/apply.html">
-                                <h3>申込方法</h3>
-                                <p>詳細はこちら</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="otherbox">
-                    <div class="other-imgbox other-imgbox04">
-                        <a href="./Link08/office.html"><img src="./main.images/company info.jpg" alt="会社概要"></a>
-                        <div class="other-textbox other-textbox01">
-                            <a href="./Link08/office.html">
-                                <h3>会社概要</h3>
-                                <p>詳細はこちら</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        </footer>
     </main>
 
-    <footer>
-        <section class="section04">
-            <div class="set-foot-imgbox">
-                <div class="foot-imgbox">
-                    <a href="./index.html"><img src="./img/logo.png" alt="北関東ロゴ"></a>
-                </div>
-            </div>
-            <h3>お問い合わせ</h3>
-            <h5>募集期間中にコース説明会を実施しておりますのでお気軽にご連絡・ご相談ください。</h5>
-            <p>📞011-232-5508<br>
-                （受付時間:9:00 ~ 17:00）</p>
-            <h3>サイトコンテンツ</h3>
-            <div class="site-box">
-                <ul class="ul01">
-                    <a href="./Link/about us.html">
-                        <li>> 北関東学院とは</li>
-                    </a>
-                    <a href="./Link02/design.html">
-                        <li>> WEB デザインクリエーター科</li>
-                    </a>
-                    <a href="./Link03/program.html">
-                        <li>> WEB プログラミングデザイン科</li>
-                    </a>
-                    <a href="./Link04/frontend.html">
-                        <li>> WEB フロントエンド構築科</li>
-                    </a>
-                </ul>
-                <ul class="ul02">
-                    <a href="./Link05/staff.html">
-                        <li>> スタッフ紹介</li>
-                    </a>
-                    <a href="./Link06/Alumni.html">
-                        <li>> 修了生の声</li>
-                    </a>
-                    <a href="./Link07/apply.html">
-                        <li>> 申込方法</li>
-                    </a>
-                    <a href="./Link08/office.html">
-                        <li>> 会社概要</li>
-                    </a>
-                </ul>
-            </div>
-        </section>
+    <!-- ↓　JS読み込み -->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- slick -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/js/6-1-7.js"></script> -->
+    <!-- js -->
+    <script src="./js/main.js"></script>
 
-        <h6>ⓒ KITAKNTO GAKUIN.Inc</h6>
-    </footer>
-
-
+    <!-- やまがた "水族館の歩き方"-->
     <script>
-        $('#target').click(() => {
-            $('body').toggleClass('active');
-            // $('#nav_target').toggleClass('active');
-        });
-
-        $("#g-nav a").click(() => {
-            $('body').removeClass('active');
-            // $('#nav_target').removeClass('active');
+        // 該当の要素がクリックされた時に  $(".title").on("click  まで。
+        $(".title").on("click", (event) => {
+            // クリックした要素の次の要素を取得 => nextメソッド
+            let value = $(event.currentTarget).next();
+            console.log(value);
+            // 変数valueの次の要素(div)に対してslideToggleメソッドを命令することで
+            // 表示⇔非表示の切替を行う 便利！
+            value.slideToggle();
+            $(event.currentTarget).toggleClass("close");
         })
-
-        $("#js-overlay").click(() => {
-            $('body').removeClass('active');
-            // $('#nav_target').removeClass('active');
-        })
-
-
-        const scrollAdd = () => {                        // 動きの起点は、画面を一定の高さ以上にスクロールしたとき
-            let headerheight = $('#main').outerHeight(); // id="main" の高さ取得                                                   
-            let scroll = $(window).scrollTop();         //スクロール値の取得
-
-            if (scroll >= headerheight) {
-                $('.head_box').addClass('change-color');
-            } else {
-                $('.head_box').removeClass('change-color');
-            };
-        }
-        //↓動かすタイミング(画面をスクロールしたときに動かす)
-        $(window).scroll(() => {
-            scrollAdd();
-        });
-
     </script>
+    <!-- やまがた "水族館の歩き方" ここまで -->
 
-    <script src="./main.js"></script>
+
+
 </body>
 
 </html>
